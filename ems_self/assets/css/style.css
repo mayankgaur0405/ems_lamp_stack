@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --sidebar-bg: #1c2438;
+    --sidebar-hover: #242f47;
+    --body-bg: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --danger: #ef4444;
+    --success: #10b981;
+    --warning: #f59e0b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-main);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--sidebar-bg) !important;
+    color: #cbd5e1;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar .nav-link {
+    color: #94a3b8 !important;
+    font-weight: 500;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    background-color: var(--sidebar-hover);
+    color: #ffffff !important;
+}
+
+.sidebar-heading {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+}
+
+/* Modern Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Form Controls */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    box-shadow: none;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+/* Modern Tables */
+.table-custom {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    margin-bottom: 0;
+}
+
+.table-custom th {
+    background-color: #ffffff;
+    border-bottom: 2px solid #f1f5f9;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 0.85rem;
+    padding: 1rem 1.5rem;
+}
+
+.table-custom td {
+    vertical-align: middle;
+    color: #475569;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.table-custom tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Modern Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+}
+
+.btn-outline-primary, .btn-outline-danger, .btn-outline-success, .btn-outline-warning, .btn-outline-secondary {
+    background-color: transparent;
+}
+
+.btn-sm {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.85rem;
+    border-radius: 20px; /* Pill shape for action buttons */
+}
+
+/* Condensed Data Display */
+.text-subtext {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 3px;
+}
+
+.text-primary-data {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Search bar styling */
+.search-wrapper .input-group {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.search-wrapper input {
+    border: none;
+    padding: 0.75rem 1rem;
+    box-shadow: none;
+}
+
+.search-wrapper input:focus {
+    box-shadow: none;
+}
+
+.search-wrapper .input-group-text {
+    background: #fff;
+    border: none;
+    color: var(--text-muted);
+}
+
+/* Status Badges */
+.badge-status {
+    padding: 0.4em 0.8em;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+.badge-role {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 0.35em 0.8em;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-role.employee { background-color: #d1fae5; color: #059669; }
+.badge-role.admin { background-color: #fee2e2; color: #dc2626; }
+
+/* Pagination modern */
+.pagination {
+    margin-top: 1.5rem;
+}
+
+.page-item .page-link {
+    border-radius: 8px;
+    margin: 0 4px;
+    color: var(--text-muted);
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    transition: all 0.2s;
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
+
+.page-item .page-link:hover:not(.active) {
+    background-color: #f8fafc;
+    color: var(--text-main);
+}
+
+/* Dashboard Metric Cards */
+.metric-card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.metric-title {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1;
+}
+
+.metric-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Utilities */
+.text-xs { font-size: 0.75rem; }
+.fw-semibold { font-weight: 600; }
