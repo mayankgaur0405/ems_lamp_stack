@@ -5,7 +5,7 @@ $adminBase = $adminPos !== false ? substr($script, 0, $adminPos + 6) : '';
 $rootBase = $adminBase ? dirname($adminBase) : '';
 ?>
 
-<div class="sidebar d-flex flex-column flex-shrink-0 p-3 vh-100" style="width: 310px; overflow-y: auto;">
+<div class="sidebar d-flex flex-column flex-shrink-0 p-3 vh-100 position-sticky top-0" style="width: 310px; overflow-y: auto;">
     <a href="<?php echo $adminBase; ?>/dashboard.php" class="d-flex align-items-center mb-4 text-white text-decoration-none">
         <span class="fs-4 fw-bold ms-2">Emp<span style="color: #3b82f6;">Manager</span></span>
     </a>

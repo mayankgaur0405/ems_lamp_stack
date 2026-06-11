@@ -6,7 +6,7 @@ $rootBase = $empBase ? dirname($empBase) : '';
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
-<div class="sidebar d-flex flex-column flex-shrink-0 p-3 vh-100" style="width: 260px; overflow-y: auto;">
+<div class="sidebar d-flex flex-column flex-shrink-0 p-3 vh-100 position-sticky top-0" style="width: 260px; overflow-y: auto;">
     <a href="<?php echo $empBase; ?>/dashboard.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <span class="fs-4 fw-bold">Emp<span style="color: var(--primary-color);">Manager</span></span>
     </a>
